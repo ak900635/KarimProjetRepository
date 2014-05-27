@@ -1,10 +1,10 @@
-<%= form_for(@chpaitre) do |f| %>
-  <% if @chpaitre.errors.any? %>
+<%= form_for(@chapitre) do |f| %>
+  <% if @chapitre.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@chpaitre.errors.count, "error") %> prohibited this chpaitre from being saved:</h2>
+      <h2><%= pluralize(@chapitre.errors.count, "error") %> prohibited this chapitre from being saved:</h2>
 
       <ul>
-      <% @chpaitre.errors.full_messages.each do |message| %>
+      <% @chapitre.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

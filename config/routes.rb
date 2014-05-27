@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
+  resources :chapitres
+
   resources :personnes
 
   resources :scenes
 
   resources :anecdotes
-
-  resources :chpaitres
-
+  root  'chapitres#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

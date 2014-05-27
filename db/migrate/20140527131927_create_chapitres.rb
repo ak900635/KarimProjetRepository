@@ -1,6 +1,6 @@
-class CreateChpaitres < ActiveRecord::Migration
+class CreateChapitres < ActiveRecord::Migration
   def change
-    create_table :chpaitres do |t|
+    create_table :chapitres do |t|
       t.string :name
       t.integer :numero
 
