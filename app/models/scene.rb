@@ -1,5 +1,7 @@
 class Scene < ActiveRecord::Base
- validates :period, :length => { :maximum => 100 , :minimum => 1 }
- validates :recit , :length => { :maximum => 140 , :minimum => 1}
- validates :lieu , :length => { :maximum => 140 , :minimum => 1}
+	belongs_to :chapitre
+	validates :recit, :length => { :maximum => 175 , :minimum => 1 }
+	validates :lieu, :length => { :maximum => 175 , :minimum => 1 }
+	validates :chapitre_id, :length => { :maximum => 4, :minimum => 1 }
+    has_many :personnes
 end

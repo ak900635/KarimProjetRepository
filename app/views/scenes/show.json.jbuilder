@@ -1,1 +1,1 @@
-json.extract! @scene, :id, :period, :recit, :lieu, :created_at, :updated_at
+json.extract! @scene, :period, :recit, :lieu, :chapitre_id, :created_at, :updated_at

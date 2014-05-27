@@ -4,6 +4,7 @@ class CreateScenes < ActiveRecord::Migration
       t.date :period
       t.text :recit
       t.string :lieu
+      t.integer :chapitre_id
 
       t.timestamps
     end

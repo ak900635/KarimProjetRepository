@@ -29,9 +29,9 @@ class AnecdotesController < ApplicationController
     respond_to do |format|
       if @anecdote.save
         format.html { redirect_to @anecdote, notice: 'Anecdote was successfully created.' }
-        format.json { render :show, status: :created, location: @anecdote }
+        format.json { render action: 'show', status: :created, location: @anecdote }
       else
-        format.html { render :new }
+        format.html { render action: 'new' }
         format.json { render json: @anecdote.errors, status: :unprocessable_entity }
       end
     end
@@ -43,9 +43,9 @@ class AnecdotesController < ApplicationController
     respond_to do |format|
       if @anecdote.update(anecdote_params)
         format.html { redirect_to @anecdote, notice: 'Anecdote was successfully updated.' }
-        format.json { render :show, status: :ok, location: @anecdote }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
+        format.html { render action: 'edit' }
         format.json { render json: @anecdote.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class AnecdotesController < ApplicationController
   def destroy
     @anecdote.destroy
     respond_to do |format|
-      format.html { redirect_to anecdotes_url, notice: 'Anecdote was successfully destroyed.' }
+      format.html { redirect_to anecdotes_url }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class AnecdotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def anecdote_params
-      params.require(:anecdote).permit(:sujet, :theme)
+      params.require(:anecdote).permit(:sujet, :theme, :chapitre_id)
     end
 end

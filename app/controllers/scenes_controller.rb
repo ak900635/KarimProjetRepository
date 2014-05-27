@@ -29,9 +29,9 @@ class ScenesController < ApplicationController
     respond_to do |format|
       if @scene.save
         format.html { redirect_to @scene, notice: 'Scene was successfully created.' }
-        format.json { render :show, status: :created, location: @scene }
+        format.json { render action: 'show', status: :created, location: @scene }
       else
-        format.html { render :new }
+        format.html { render action: 'new' }
         format.json { render json: @scene.errors, status: :unprocessable_entity }
       end
     end
@@ -43,9 +43,9 @@ class ScenesController < ApplicationController
     respond_to do |format|
       if @scene.update(scene_params)
         format.html { redirect_to @scene, notice: 'Scene was successfully updated.' }
-        format.json { render :show, status: :ok, location: @scene }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
+        format.html { render action: 'edit' }
         format.json { render json: @scene.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class ScenesController < ApplicationController
   def destroy
     @scene.destroy
     respond_to do |format|
-      format.html { redirect_to scenes_url, notice: 'Scene was successfully destroyed.' }
+      format.html { redirect_to scenes_url }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class ScenesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scene_params
-      params.require(:scene).permit(:period, :recit, :lieu)
+      params.require(:scene).permit(:period, :recit, :lieu, :chapitre_id)
     end
 end

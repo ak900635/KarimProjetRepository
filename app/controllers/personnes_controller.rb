@@ -29,9 +29,9 @@ class PersonnesController < ApplicationController
     respond_to do |format|
       if @personne.save
         format.html { redirect_to @personne, notice: 'Personne was successfully created.' }
-        format.json { render :show, status: :created, location: @personne }
+        format.json { render action: 'show', status: :created, location: @personne }
       else
-        format.html { render :new }
+        format.html { render action: 'new' }
         format.json { render json: @personne.errors, status: :unprocessable_entity }
       end
     end
@@ -43,9 +43,9 @@ class PersonnesController < ApplicationController
     respond_to do |format|
       if @personne.update(personne_params)
         format.html { redirect_to @personne, notice: 'Personne was successfully updated.' }
-        format.json { render :show, status: :ok, location: @personne }
+        format.json { head :no_content }
       else
-        format.html { render :edit }
+        format.html { render action: 'edit' }
         format.json { render json: @personne.errors, status: :unprocessable_entity }
       end
     end
@@ -56,7 +56,7 @@ class PersonnesController < ApplicationController
   def destroy
     @personne.destroy
     respond_to do |format|
-      format.html { redirect_to personnes_url, notice: 'Personne was successfully destroyed.' }
+      format.html { redirect_to personnes_url }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class PersonnesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def personne_params
-      params.require(:personne).permit(:nom)
+      params.require(:personne).permit(:nom, :scene_id)
     end
 end
