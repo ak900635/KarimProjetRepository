@@ -1,0 +1,27 @@
+<h1>Listing chpaitres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Numero</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chpaitres.each do |chpaitre| %>
+      <tr>
+        <td><%= chpaitre.name %></td>
+        <td><%= chpaitre.numero %></td>
+        <td><%= link_to 'Show', chpaitre %></td>
+        <td><%= link_to 'Edit', edit_chpaitre_path(chpaitre) %></td>
+        <td><%= link_to 'Destroy', chpaitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chpaitre', new_chpaitre_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period: 2014-05-27
+  recit: MyText
+  lieu: MyString
+
+two:
+  period: 2014-05-27
+  recit: MyText
+  lieu: MyString
