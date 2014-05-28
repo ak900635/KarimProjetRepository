@@ -5,6 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Numero</th>
+      <th>IDChapitre<th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
       <tr>
         <td><%= chapitre.name %></td>
         <td><%= chapitre.numero %></td>
+        <td><%= chapitre.id %></td>
         <td><%= link_to 'Details', chapitre %></td>
         <td><%= link_to 'Editer', edit_chapitre_path(chapitre) %></td>
         <td><%= link_to 'Detruire', chapitre, method: :delete, data: { confirm: 'Etes vous sure ?' } %></td>
