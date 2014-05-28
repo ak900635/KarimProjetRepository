@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nom:</strong>
   <%= @chapitre.name %>
 </p>
 
@@ -10,7 +10,7 @@
   <%= @chapitre.numero %>
 </p>
 <p>
-  <strong>Anecdote:</strong>
+  <strong>Anecdote correspondante:</strong>
   <% @chapitre.anecdotes.each do |c| %>
 
  <p> <small>sujet: </small><%= c.sujet %>
@@ -20,7 +20,7 @@
 </p>
 
 <p>
- <strong>Scene:</strong>
+ <strong>Scene correspondante:</strong>
  <% @chapitre.scenes.each do |scene| %>
  <p><small>recit: </small><%= scene.recit %>
  <small>lieu: </small><%=scene.lieu %>
@@ -28,5 +28,5 @@
  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_chapitre_path(@chapitre) %> |
-<%= link_to 'Back', chapitres_path %>
+<%= link_to 'Editer', edit_chapitre_path(@chapitre) %> |
+<%= link_to 'Retour', chapitres_path %>

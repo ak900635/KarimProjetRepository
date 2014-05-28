@@ -18,9 +18,9 @@
         <td><%= scene.recit %></td>
         <td><%= scene.lieu %></td>
         <td><%= scene.chapitre_id %></td>
-        <td><%= link_to 'Show', scene %></td>
-        <td><%= link_to 'Edit', edit_scene_path(scene) %></td>
-        <td><%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Liste Des sceness', scene %></td>
+        <td><%= link_to 'Editer', edit_scene_path(scene) %></td>
+        <td><%= link_to 'Detruire', scene, method: :delete, data: { confirm: 'Etes vous sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Scene', new_scene_path %>
+<%= link_to 'Creer Nouvelle Scene', new_scene_path %>

@@ -16,9 +16,9 @@
         <td><%= anecdote.sujet %></td>
         <td><%= anecdote.theme %></td>
         <td><%= anecdote.chapitre_id %></td>
-        <td><%= link_to 'Show', anecdote %></td>
-        <td><%= link_to 'Edit', edit_anecdote_path(anecdote) %></td>
-        <td><%= link_to 'Destroy', anecdote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Liste des anecdotes', anecdote %></td>
+        <td><%= link_to 'Editer', edit_anecdote_path(anecdote) %></td>
+        <td><%= link_to 'Detruire', anecdote, method: :delete, data: { confirm: 'Etes vous sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Anecdote', new_anecdote_path %>
+<%= link_to 'Creer Nouvelle anecdote', new_anecdote_path %>

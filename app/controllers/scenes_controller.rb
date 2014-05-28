@@ -28,7 +28,7 @@ class ScenesController < ApplicationController
 
     respond_to do |format|
       if @scene.save
-        format.html { redirect_to @scene, notice: 'Scene was successfully created.' }
+        format.html { redirect_to @scene, notice: 'Nouvelle Scene Cree.' }
         format.json { render action: 'show', status: :created, location: @scene }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class ScenesController < ApplicationController
   def update
     respond_to do |format|
       if @scene.update(scene_params)
-        format.html { redirect_to @scene, notice: 'Scene was successfully updated.' }
+        format.html { redirect_to @scene, notice: 'Scene a ete mise a jour.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

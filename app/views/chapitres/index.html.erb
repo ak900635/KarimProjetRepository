@@ -14,9 +14,9 @@
       <tr>
         <td><%= chapitre.name %></td>
         <td><%= chapitre.numero %></td>
-        <td><%= link_to 'Show', chapitre %></td>
-        <td><%= link_to 'Edit', edit_chapitre_path(chapitre) %></td>
-        <td><%= link_to 'Destroy', chapitre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Liste des Chapitres', chapitre %></td>
+        <td><%= link_to 'Editer', edit_chapitre_path(chapitre) %></td>
+        <td><%= link_to 'Detruire', chapitre, method: :delete, data: { confirm: 'Etes vous sure ?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Chapitre', new_chapitre_path %>
+<%= link_to 'Creer Nouveau Chapitre', new_chapitre_path %>

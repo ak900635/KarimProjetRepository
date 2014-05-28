@@ -14,9 +14,9 @@
       <tr>
         <td><%= personne.nom %></td>
         <td><%= personne.scene_id %></td>
-        <td><%= link_to 'Show', personne %></td>
-        <td><%= link_to 'Edit', edit_personne_path(personne) %></td>
-        <td><%= link_to 'Destroy', personne, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Liste des personnes', personne %></td>
+        <td><%= link_to 'Editer', edit_personne_path(personne) %></td>
+        <td><%= link_to 'Detruire', personne, method: :delete, data: { confirm: 'Etes vous sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Personne', new_personne_path %>
+<%= link_to 'Creer Nouvelle Personne', new_personne_path %>

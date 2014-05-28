@@ -28,7 +28,7 @@ class AnecdotesController < ApplicationController
 
     respond_to do |format|
       if @anecdote.save
-        format.html { redirect_to @anecdote, notice: 'Anecdote was successfully created.' }
+        format.html { redirect_to @anecdote, notice: 'Nouvelle Anecdote Cree.' }
         format.json { render action: 'show', status: :created, location: @anecdote }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class AnecdotesController < ApplicationController
   def update
     respond_to do |format|
       if @anecdote.update(anecdote_params)
-        format.html { redirect_to @anecdote, notice: 'Anecdote was successfully updated.' }
+        format.html { redirect_to @anecdote, notice: 'Anecdote a ete mis a jour.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

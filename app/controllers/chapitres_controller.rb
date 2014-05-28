@@ -30,7 +30,7 @@ class ChapitresController < ApplicationController
 
     respond_to do |format|
       if @chapitre.save
-        format.html { redirect_to @chapitre, notice: 'Chapitre was successfully created.' }
+        format.html { redirect_to @chapitre, notice: 'Nouveau chapitre Cree.' }
         format.json { render action: 'show', status: :created, location: @chapitre }
       else
         format.html { render action: 'new' }
@@ -44,7 +44,7 @@ class ChapitresController < ApplicationController
   def update
     respond_to do |format|
       if @chapitre.update(chapitre_params)
-        format.html { redirect_to @chapitre, notice: 'Chapitre was successfully updated.' }
+        format.html { redirect_to @chapitre, notice: 'Chapitre a ete mis a jour .' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

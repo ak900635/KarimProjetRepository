@@ -19,6 +19,14 @@
   <strong>Chapitre:</strong>
   <%= @scene.chapitre_id %>
 </p>
+<p>
+  <strong>Personne correspondante:</strong>
+  <% @scene.personnes.each do |c| %>
 
-<%= link_to 'Edit', edit_scene_path(@scene) %> |
-<%= link_to 'Back', scenes_path %>
+ <p> <small>nom: </small><%= c.nom %>
+  <% end %>
+
+</p>
+
+<%= link_to 'Editer', edit_scene_path(@scene) %> |
+<%= link_to 'Retour', scenes_path %>
