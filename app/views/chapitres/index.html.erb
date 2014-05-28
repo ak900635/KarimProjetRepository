@@ -14,7 +14,7 @@
       <tr>
         <td><%= chapitre.name %></td>
         <td><%= chapitre.numero %></td>
-        <td><%= link_to 'Liste des Chapitres', chapitre %></td>
+        <td><%= link_to 'Details', chapitre %></td>
         <td><%= link_to 'Editer', edit_chapitre_path(chapitre) %></td>
         <td><%= link_to 'Detruire', chapitre, method: :delete, data: { confirm: 'Etes vous sure ?' } %></td>
       </tr>

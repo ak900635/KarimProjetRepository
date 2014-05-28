@@ -25,8 +25,19 @@
  <p><small>recit: </small><%= scene.recit %>
  <small>lieu: </small><%=scene.lieu %>
  <small>period: </small><%=scene.period %></p>
+ <small>n° scene: </small><%=scene.id %></p>
  <% end %>
 </p>
+<p>
+  <strong>Personnages correspondants:</strong>
+  <% @chapitre.scenes.each do |d| %>
+  <% d.personnes.each do |c| %>
+
+ <p> <small>nom: </small><%= c.nom %></p>
+  <% end %>
+ <% end %>
+</p>
+
 
 <%= link_to 'Editer', edit_chapitre_path(@chapitre) %> |
 <%= link_to 'Retour', chapitres_path %>

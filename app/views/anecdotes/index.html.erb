@@ -16,7 +16,7 @@
         <td><%= anecdote.sujet %></td>
         <td><%= anecdote.theme %></td>
         <td><%= anecdote.chapitre_id %></td>
-        <td><%= link_to 'Liste des anecdotes', anecdote %></td>
+        <td><%= link_to 'Details', anecdote %></td>
         <td><%= link_to 'Editer', edit_anecdote_path(anecdote) %></td>
         <td><%= link_to 'Detruire', anecdote, method: :delete, data: { confirm: 'Etes vous sure?' } %></td>
       </tr>
